@@ -12,7 +12,7 @@ const app =express() ;
 /////////// middleware area
 
 app.use(cors());
-app.use(express.json())
+app.use(express.json()) ;
 
 
  ////// connection///////////
@@ -35,11 +35,11 @@ app.use(express.json())
     const query={}
     const cursor = itemsCollection.find(query)
     const itemsBundle= await cursor.toArray();
-    res.send(itemsBundle)
+    res.send(itemsBundle) ;
    });
 
 
- //// for single user
+ //// for single user///
 
   app.get('/items/:id', async(req,res)=>{
 
@@ -49,7 +49,7 @@ app.use(express.json())
     res.send(items)
   });
 
-// post  area 
+// post  area ////
 
  app.post('/items' , async(req,res)=>{
 
