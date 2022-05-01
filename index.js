@@ -13,6 +13,14 @@ app.use(cors());
 app.use(express.json())
 
 
+ ////// connection///////////
+
+
+
+
+
+
+
 // root 
 app.get('/' , (req, res)=>{
     res.send('warehouse server is running')
