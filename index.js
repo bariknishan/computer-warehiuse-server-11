@@ -9,7 +9,7 @@ const app =express() ;
 
 
 
-/////////// middleware area
+/////////// middleware area/////////
 
 app.use(cors());
 app.use(express.json()) ;
@@ -39,7 +39,7 @@ app.use(express.json()) ;
    });
 
 
- //// for single user///
+ //// for single user///////
 
   app.get('/items/:id', async(req,res)=>{
 
@@ -49,13 +49,13 @@ app.use(express.json()) ;
     res.send(items)
   });
 
-// post  area ////
+// post  area ////////
 
  app.post('/items' , async(req,res)=>{
 
     const newItems= req.body ;
     const result = await itemsCollection.insertOne(newItems)
-    res.send(result)
+    res.send(result);
  })
 
  // delete
