@@ -86,6 +86,13 @@ app.get('/' , (req, res)=>{
     res.send('warehouse server is running')
 });
 
+
+// demo for heroku 
+app.get('/barik', (req,res)=>{
+  res.send('barik is running');
+})
+
+
 app.listen(port,()=>{
     console.log('server is running on port', port)
 })
